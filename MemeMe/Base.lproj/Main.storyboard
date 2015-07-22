@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +17,109 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bzv-ce-wDC">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="38" y="102" width="325" height="352"/>
+                                </variation>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZZL-ag-zie">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Pick" id="LwZ-d6-20W">
+                                        <connections>
+                                            <action selector="pickAnImage:" destination="vXZ-lx-hvc" id="EnA-vE-S0g"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Take new pic" id="Nzk-5b-ppP">
+                                        <connections>
+                                            <action selector="pickAnImageFromCamera:" destination="vXZ-lx-hvc" id="Zcr-Pd-fYf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rqQ-aI-drR">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="38" y="507" width="325" height="17"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VLe-NA-566">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="38" y="49" width="297" height="17"/>
+                                </variation>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="VLe-NA-566" secondAttribute="centerX" constant="-0.5" id="Es8-HA-aLB"/>
+                            <constraint firstItem="ZZL-ag-zie" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="NVK-Fg-u8H"/>
+                            <constraint firstItem="ZZL-ag-zie" firstAttribute="top" secondItem="bzv-ce-wDC" secondAttribute="bottom" constant="102" id="XXl-fs-Afb"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ZZL-ag-zie" secondAttribute="bottom" id="eIa-Hf-f4S"/>
+                            <constraint firstAttribute="centerX" secondItem="rqQ-aI-drR" secondAttribute="centerX" constant="-0.5" id="fYr-2w-w2B"/>
+                            <constraint firstAttribute="centerX" secondItem="bzv-ce-wDC" secondAttribute="centerX" constant="-0.5" id="reK-Gx-Vtv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZZL-ag-zie" secondAttribute="trailing" constant="-16" id="t4j-0u-hMx"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="rqQ-aI-drR" secondAttribute="bottom" constant="76" id="tXE-WW-tuW"/>
+                            <constraint firstAttribute="centerY" secondItem="bzv-ce-wDC" secondAttribute="centerY" constant="22" id="tfx-yd-RDJ"/>
+                            <constraint firstItem="bzv-ce-wDC" firstAttribute="top" secondItem="VLe-NA-566" secondAttribute="bottom" constant="36" id="tlf-ha-iSc"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="bzv-ce-wDC"/>
+                                <exclude reference="ZZL-ag-zie"/>
+                                <exclude reference="rqQ-aI-drR"/>
+                                <exclude reference="VLe-NA-566"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="eIa-Hf-f4S"/>
+                                <exclude reference="tXE-WW-tuW"/>
+                                <exclude reference="Es8-HA-aLB"/>
+                                <exclude reference="fYr-2w-w2B"/>
+                                <exclude reference="NVK-Fg-u8H"/>
+                                <exclude reference="XXl-fs-Afb"/>
+                                <exclude reference="t4j-0u-hMx"/>
+                                <exclude reference="reK-Gx-Vtv"/>
+                                <exclude reference="tfx-yd-RDJ"/>
+                                <exclude reference="tlf-ha-iSc"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="bzv-ce-wDC"/>
+                                <include reference="ZZL-ag-zie"/>
+                                <include reference="rqQ-aI-drR"/>
+                                <include reference="VLe-NA-566"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="eIa-Hf-f4S"/>
+                                <include reference="tXE-WW-tuW"/>
+                                <include reference="Es8-HA-aLB"/>
+                                <include reference="fYr-2w-w2B"/>
+                                <include reference="NVK-Fg-u8H"/>
+                                <include reference="XXl-fs-Afb"/>
+                                <include reference="t4j-0u-hMx"/>
+                                <include reference="reK-Gx-Vtv"/>
+                                <include reference="tfx-yd-RDJ"/>
+                                <include reference="tlf-ha-iSc"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="bottomTextField" destination="rqQ-aI-drR" id="NtT-jC-DkN"/>
+                        <outlet property="cameraButton" destination="Nzk-5b-ppP" id="STU-7N-SXx"/>
+                        <outlet property="imagePIckerView" destination="bzv-ce-wDC" id="2vO-pi-HLA"/>
+                        <outlet property="topTextField" destination="VLe-NA-566" id="RDn-b9-2gB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-64.5" y="257"/>
         </scene>
     </scenes>
 </document>
