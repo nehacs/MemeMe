@@ -38,28 +38,21 @@
                                         </connections>
                                     </barButtonItem>
                                 </items>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="556" width="400" height="67"/>
-                                </variation>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rqQ-aI-drR">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="168" y="444" width="65" height="17"/>
-                                </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VLe-NA-566">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VLe-NA-566">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="184" y="89" width="33" height="17"/>
-                                </variation>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="rqQ-aI-drR" firstAttribute="top" secondItem="bzv-ce-wDC" secondAttribute="bottom" constant="18" id="5r6-sz-gIV"/>
                             <constraint firstAttribute="centerX" secondItem="VLe-NA-566" secondAttribute="centerX" constant="-0.5" id="Es8-HA-aLB"/>
@@ -80,16 +73,16 @@
                                 <exclude reference="VLe-NA-566"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="OZe-fs-sjP"/>
-                                <exclude reference="reK-Gx-Vtv"/>
-                                <exclude reference="tfx-yd-RDJ"/>
+                                <exclude reference="eIa-Hf-f4S"/>
                                 <exclude reference="Es8-HA-aLB"/>
                                 <exclude reference="5r6-sz-gIV"/>
                                 <exclude reference="fYr-2w-w2B"/>
                                 <exclude reference="NVK-Fg-u8H"/>
                                 <exclude reference="XXl-fs-Afb"/>
                                 <exclude reference="t4j-0u-hMx"/>
-                                <exclude reference="eIa-Hf-f4S"/>
+                                <exclude reference="OZe-fs-sjP"/>
+                                <exclude reference="reK-Gx-Vtv"/>
+                                <exclude reference="tfx-yd-RDJ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -100,16 +93,16 @@
                                 <include reference="VLe-NA-566"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="OZe-fs-sjP"/>
-                                <include reference="reK-Gx-Vtv"/>
-                                <include reference="tfx-yd-RDJ"/>
+                                <include reference="eIa-Hf-f4S"/>
                                 <include reference="Es8-HA-aLB"/>
                                 <include reference="5r6-sz-gIV"/>
                                 <include reference="fYr-2w-w2B"/>
                                 <include reference="NVK-Fg-u8H"/>
                                 <include reference="XXl-fs-Afb"/>
                                 <include reference="t4j-0u-hMx"/>
-                                <include reference="eIa-Hf-f4S"/>
+                                <include reference="OZe-fs-sjP"/>
+                                <include reference="reK-Gx-Vtv"/>
+                                <include reference="tfx-yd-RDJ"/>
                             </mask>
                         </variation>
                     </view>
