@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -39,20 +39,18 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rqQ-aI-drR">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VLe-NA-566">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VLe-NA-566">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rqQ-aI-drR">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rqQ-aI-drR" firstAttribute="top" secondItem="bzv-ce-wDC" secondAttribute="bottom" constant="18" id="5r6-sz-gIV"/>
                             <constraint firstAttribute="centerX" secondItem="VLe-NA-566" secondAttribute="centerX" constant="-0.5" id="Es8-HA-aLB"/>
@@ -69,8 +67,8 @@
                             <mask key="subviews">
                                 <exclude reference="bzv-ce-wDC"/>
                                 <exclude reference="ZZL-ag-zie"/>
-                                <exclude reference="rqQ-aI-drR"/>
                                 <exclude reference="VLe-NA-566"/>
+                                <exclude reference="rqQ-aI-drR"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="eIa-Hf-f4S"/>
@@ -89,8 +87,8 @@
                             <mask key="subviews">
                                 <include reference="bzv-ce-wDC"/>
                                 <include reference="ZZL-ag-zie"/>
-                                <include reference="rqQ-aI-drR"/>
                                 <include reference="VLe-NA-566"/>
+                                <include reference="rqQ-aI-drR"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="eIa-Hf-f4S"/>
