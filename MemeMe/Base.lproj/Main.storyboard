@@ -18,12 +18,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bzv-ce-wDC">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="38" y="120" width="325" height="306"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VLe-NA-566">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rqQ-aI-drR">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nm6-m4-4CJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem enabled="NO" systemItem="action" id="tkx-Bl-67f">
+                                        <connections>
+                                            <action selector="share:" destination="vXZ-lx-hvc" id="9Zr-Gq-YNd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="17" width="400" height="44"/>
                                 </variation>
-                            </imageView>
+                            </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZZL-ag-zie">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
@@ -39,37 +56,23 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VLe-NA-566">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rqQ-aI-drR">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                            </textField>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nm6-m4-4CJ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <barButtonItem enabled="NO" title="Share" id="tkx-Bl-67f">
-                                        <connections>
-                                            <action selector="share:" destination="vXZ-lx-hvc" id="9Zr-Gq-YNd"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="17" width="400" height="44"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bzv-ce-wDC">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="38" y="120" width="325" height="313"/>
                                 </variation>
-                            </toolbar>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="VLe-NA-566" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="51" id="0ND-5N-dFS"/>
                             <constraint firstAttribute="centerX" secondItem="VLe-NA-566" secondAttribute="centerX" constant="-0.5" id="Es8-HA-aLB"/>
                             <constraint firstItem="ZZL-ag-zie" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="NVK-Fg-u8H"/>
-                            <constraint firstItem="ZZL-ag-zie" firstAttribute="top" secondItem="bzv-ce-wDC" secondAttribute="bottom" constant="102" id="XXl-fs-Afb"/>
+                            <constraint firstAttribute="bottom" secondItem="bzv-ce-wDC" secondAttribute="bottom" constant="167" id="RTD-dW-2bs"/>
+                            <constraint firstItem="bzv-ce-wDC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="38" id="Wh0-CP-Vnw"/>
+                            <constraint firstAttribute="trailing" secondItem="bzv-ce-wDC" secondAttribute="trailing" constant="37" id="e3Y-0Y-lFw"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ZZL-ag-zie" secondAttribute="bottom" id="eIa-Hf-f4S"/>
+                            <constraint firstItem="bzv-ce-wDC" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="120" id="fEq-mZ-EeZ"/>
                             <constraint firstAttribute="centerX" secondItem="rqQ-aI-drR" secondAttribute="centerX" constant="-0.5" id="fYr-2w-w2B"/>
                             <constraint firstAttribute="centerX" secondItem="bzv-ce-wDC" secondAttribute="centerX" constant="-0.5" id="reK-Gx-Vtv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZZL-ag-zie" secondAttribute="trailing" constant="-16" id="t4j-0u-hMx"/>
@@ -78,44 +81,50 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="bzv-ce-wDC"/>
-                                <exclude reference="ZZL-ag-zie"/>
                                 <exclude reference="VLe-NA-566"/>
                                 <exclude reference="rqQ-aI-drR"/>
                                 <exclude reference="Nm6-m4-4CJ"/>
+                                <exclude reference="ZZL-ag-zie"/>
+                                <exclude reference="bzv-ce-wDC"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="eIa-Hf-f4S"/>
-                                <exclude reference="vTF-6r-3dX"/>
+                                <exclude reference="RTD-dW-2bs"/>
+                                <exclude reference="Wh0-CP-Vnw"/>
+                                <exclude reference="e3Y-0Y-lFw"/>
+                                <exclude reference="fEq-mZ-EeZ"/>
+                                <exclude reference="reK-Gx-Vtv"/>
+                                <exclude reference="tfx-yd-RDJ"/>
                                 <exclude reference="0ND-5N-dFS"/>
                                 <exclude reference="Es8-HA-aLB"/>
                                 <exclude reference="fYr-2w-w2B"/>
                                 <exclude reference="NVK-Fg-u8H"/>
-                                <exclude reference="XXl-fs-Afb"/>
                                 <exclude reference="t4j-0u-hMx"/>
-                                <exclude reference="reK-Gx-Vtv"/>
-                                <exclude reference="tfx-yd-RDJ"/>
+                                <exclude reference="eIa-Hf-f4S"/>
+                                <exclude reference="vTF-6r-3dX"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="bzv-ce-wDC"/>
-                                <include reference="ZZL-ag-zie"/>
                                 <include reference="VLe-NA-566"/>
                                 <include reference="rqQ-aI-drR"/>
                                 <include reference="Nm6-m4-4CJ"/>
+                                <include reference="ZZL-ag-zie"/>
+                                <include reference="bzv-ce-wDC"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="eIa-Hf-f4S"/>
-                                <include reference="vTF-6r-3dX"/>
+                                <include reference="RTD-dW-2bs"/>
+                                <include reference="Wh0-CP-Vnw"/>
+                                <include reference="e3Y-0Y-lFw"/>
+                                <include reference="fEq-mZ-EeZ"/>
+                                <include reference="reK-Gx-Vtv"/>
+                                <include reference="tfx-yd-RDJ"/>
                                 <include reference="0ND-5N-dFS"/>
                                 <include reference="Es8-HA-aLB"/>
                                 <include reference="fYr-2w-w2B"/>
                                 <include reference="NVK-Fg-u8H"/>
-                                <include reference="XXl-fs-Afb"/>
                                 <include reference="t4j-0u-hMx"/>
-                                <include reference="reK-Gx-Vtv"/>
-                                <include reference="tfx-yd-RDJ"/>
+                                <include reference="eIa-Hf-f4S"/>
+                                <include reference="vTF-6r-3dX"/>
                             </mask>
                         </variation>
                     </view>
