@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -27,14 +27,14 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZZL-ag-zie">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
-                                    <barButtonItem title="Pick" id="LwZ-d6-20W">
-                                        <connections>
-                                            <action selector="pickAnImage:" destination="vXZ-lx-hvc" id="EnA-vE-S0g"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Take new pic" id="Nzk-5b-ppP">
+                                    <barButtonItem title="Camera" id="Nzk-5b-ppP">
                                         <connections>
                                             <action selector="pickAnImageFromCamera:" destination="vXZ-lx-hvc" id="Zcr-Pd-fYf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Album" id="LwZ-d6-20W">
+                                        <connections>
+                                            <action selector="pickAnImage:" destination="vXZ-lx-hvc" id="EnA-vE-S0g"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -49,19 +49,32 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nm6-m4-4CJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem enabled="NO" title="Share" id="tkx-Bl-67f">
+                                        <connections>
+                                            <action selector="share:" destination="vXZ-lx-hvc" id="9Zr-Gq-YNd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="17" width="400" height="44"/>
+                                </variation>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rqQ-aI-drR" firstAttribute="top" secondItem="bzv-ce-wDC" secondAttribute="bottom" constant="18" id="5r6-sz-gIV"/>
+                            <constraint firstItem="VLe-NA-566" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="51" id="0ND-5N-dFS"/>
                             <constraint firstAttribute="centerX" secondItem="VLe-NA-566" secondAttribute="centerX" constant="-0.5" id="Es8-HA-aLB"/>
                             <constraint firstItem="ZZL-ag-zie" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="NVK-Fg-u8H"/>
-                            <constraint firstItem="bzv-ce-wDC" firstAttribute="top" secondItem="VLe-NA-566" secondAttribute="bottom" constant="14" id="OZe-fs-sjP"/>
                             <constraint firstItem="ZZL-ag-zie" firstAttribute="top" secondItem="bzv-ce-wDC" secondAttribute="bottom" constant="102" id="XXl-fs-Afb"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ZZL-ag-zie" secondAttribute="bottom" id="eIa-Hf-f4S"/>
                             <constraint firstAttribute="centerX" secondItem="rqQ-aI-drR" secondAttribute="centerX" constant="-0.5" id="fYr-2w-w2B"/>
                             <constraint firstAttribute="centerX" secondItem="bzv-ce-wDC" secondAttribute="centerX" constant="-0.5" id="reK-Gx-Vtv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZZL-ag-zie" secondAttribute="trailing" constant="-16" id="t4j-0u-hMx"/>
                             <constraint firstAttribute="centerY" secondItem="bzv-ce-wDC" secondAttribute="centerY" constant="22" id="tfx-yd-RDJ"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="rqQ-aI-drR" secondAttribute="bottom" constant="111" id="vTF-6r-3dX"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -69,16 +82,17 @@
                                 <exclude reference="ZZL-ag-zie"/>
                                 <exclude reference="VLe-NA-566"/>
                                 <exclude reference="rqQ-aI-drR"/>
+                                <exclude reference="Nm6-m4-4CJ"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="eIa-Hf-f4S"/>
+                                <exclude reference="vTF-6r-3dX"/>
+                                <exclude reference="0ND-5N-dFS"/>
                                 <exclude reference="Es8-HA-aLB"/>
-                                <exclude reference="5r6-sz-gIV"/>
                                 <exclude reference="fYr-2w-w2B"/>
                                 <exclude reference="NVK-Fg-u8H"/>
                                 <exclude reference="XXl-fs-Afb"/>
                                 <exclude reference="t4j-0u-hMx"/>
-                                <exclude reference="OZe-fs-sjP"/>
                                 <exclude reference="reK-Gx-Vtv"/>
                                 <exclude reference="tfx-yd-RDJ"/>
                             </mask>
@@ -89,16 +103,17 @@
                                 <include reference="ZZL-ag-zie"/>
                                 <include reference="VLe-NA-566"/>
                                 <include reference="rqQ-aI-drR"/>
+                                <include reference="Nm6-m4-4CJ"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="eIa-Hf-f4S"/>
+                                <include reference="vTF-6r-3dX"/>
+                                <include reference="0ND-5N-dFS"/>
                                 <include reference="Es8-HA-aLB"/>
-                                <include reference="5r6-sz-gIV"/>
                                 <include reference="fYr-2w-w2B"/>
                                 <include reference="NVK-Fg-u8H"/>
                                 <include reference="XXl-fs-Afb"/>
                                 <include reference="t4j-0u-hMx"/>
-                                <include reference="OZe-fs-sjP"/>
                                 <include reference="reK-Gx-Vtv"/>
                                 <include reference="tfx-yd-RDJ"/>
                             </mask>
@@ -108,12 +123,13 @@
                         <outlet property="bottomTextField" destination="rqQ-aI-drR" id="NtT-jC-DkN"/>
                         <outlet property="cameraButton" destination="Nzk-5b-ppP" id="STU-7N-SXx"/>
                         <outlet property="imagePIckerView" destination="bzv-ce-wDC" id="2vO-pi-HLA"/>
+                        <outlet property="shareButton" destination="tkx-Bl-67f" id="4Fc-On-Wex"/>
                         <outlet property="topTextField" destination="VLe-NA-566" id="RDn-b9-2gB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-64.5" y="257"/>
+            <point key="canvasLocation" x="-109.5" y="214"/>
         </scene>
     </scenes>
 </document>
