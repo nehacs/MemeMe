@@ -19,8 +19,11 @@ class SentMemesCollectionViewController: UICollectionViewController, UICollectio
     override func viewDidLoad() {
         super.viewDidLoad()
         let space: CGFloat = 3.0
+        let dimension: CGFloat = (self.view.frame.size.width - (2*space))/3.0
+        
         flowLayout.minimumInteritemSpacing = space
         flowLayout.minimumLineSpacing = space
+        flowLayout.itemSize = CGSizeMake(dimension, dimension)
     }
     
     @IBAction func createMeme(sender: AnyObject) {
