@@ -15,7 +15,7 @@ class SentMemesCollectionViewController: UICollectionViewController, UICollectio
     var memes: [Meme]!
     
     @IBAction func createMeme(sender: AnyObject) {
-        let memeEditor = MemeEditorViewController()
+        let memeEditor = storyboard!.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController
         presentViewController(memeEditor, animated: true, completion: nil)
     }
 
@@ -24,10 +24,7 @@ class SentMemesCollectionViewController: UICollectionViewController, UICollectio
         let object = UIApplication.sharedApplication().delegate
         let appDelegate = object as! AppDelegate
         memes = appDelegate.memes
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        collectionView?.reloadData()
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
