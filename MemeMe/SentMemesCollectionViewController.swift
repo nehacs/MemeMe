@@ -14,6 +14,15 @@ class SentMemesCollectionViewController: UICollectionViewController, UICollectio
     
     var memes: [Meme]!
     
+    @IBOutlet weak var flowLayout:UICollectionViewFlowLayout!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let space: CGFloat = 3.0
+        flowLayout.minimumInteritemSpacing = space
+        flowLayout.minimumLineSpacing = space
+    }
+    
     @IBAction func createMeme(sender: AnyObject) {
         let memeEditor = storyboard!.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController
         presentViewController(memeEditor, animated: true, completion: nil)
@@ -47,4 +56,5 @@ class SentMemesCollectionViewController: UICollectionViewController, UICollectio
     override
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         println("Cell \(indexPath.row) selected")
-    }}
+    }
+}

@@ -25,6 +25,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var shareButton: UIBarButtonItem!
+    @IBOutlet weak var topToolBar: UIToolbar!
+    @IBOutlet weak var bottomToolBar: UIToolbar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -148,21 +150,25 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     func generateMemedImage() -> UIImage {
         
         // Hide toolbar and navbar
-        navigationController?.setToolbarHidden(true, animated:false)
-        navigationController?.setNavigationBarHidden(true, animated:false)
+        topToolBar.hidden = true
+        bottomToolBar.hidden = true
         
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
-        let memedImage : UIImage =
-        UIGraphicsGetImageFromCurrentImageContext()
+        let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
         // Show toolbar and navbar
-        navigationController?.setToolbarHidden(false, animated:false)
-        navigationController?.setNavigationBarHidden(false, animated:false)
+        topToolBar.hidden = true
+        bottomToolBar.hidden = true
         
         return memedImage
-    }    
+    }
+
+    @IBAction func cancel(sender: AnyObject) {
+        let tabViews = storyboard!.instantiateViewControllerWithIdentifier("TabBarController") as! UITabBarController
+        presentViewController(tabViews, animated: false, completion: nil)
+    }
 }
 

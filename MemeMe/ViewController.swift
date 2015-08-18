@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
     var memes: [Meme]!
     
@@ -24,18 +24,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let object = UIApplication.sharedApplication().delegate
         let appDelegate = object as! AppDelegate
         memes = appDelegate.memes
+        self.tableView.reloadData()
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memes.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("memeReuseID", forIndexPath: indexPath) as! UITableViewCell
         
         let meme = memes[indexPath.row]
         cell.imageView?.image = meme.memedImage
+        cell.textLabel?.text = "\(meme.topText)...\(meme.bottomText)"
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        println("Cell \(indexPath.row) selected")
     }
 }
 
