@@ -22,7 +22,6 @@ class SentMemesCollectionViewController: UICollectionViewController, UICollectio
         let dimension: CGFloat = (self.view.frame.size.width - (2*space))/3.0
         
         flowLayout.minimumInteritemSpacing = space
-        flowLayout.minimumLineSpacing = space
         flowLayout.itemSize = CGSizeMake(dimension, dimension)
     }
     
@@ -56,8 +55,9 @@ class SentMemesCollectionViewController: UICollectionViewController, UICollectio
         return cell
     }
     
-    override
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        println("Cell \(indexPath.row) selected")
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath) {
+        let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
+        detailController.meme = self.memes[indexPath.row]
+        self.navigationController!.pushViewController(detailController, animated: true)
     }
 }

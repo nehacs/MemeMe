@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9ln-Li-jcQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9ln-Li-jcQ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -46,12 +46,12 @@
         <scene sceneID="3WU-iU-EbI">
             <objects>
                 <tableViewController storyboardIdentifier="ViewController" id="2xJ-4e-8Ml" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="22" sectionFooterHeight="22" id="fP7-3N-a5y">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="22" sectionFooterHeight="22" id="fP7-3N-a5y">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="memeReuseID" rowHeight="96" id="hgv-6e-dvQ">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="memeReuseID" rowHeight="94" id="hgv-6e-dvQ">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hgv-6e-dvQ" id="GZ9-pl-UrB">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -65,10 +65,10 @@
                                                 <rect key="frame" x="134" y="42" width="0.0" height="0.0"/>
                                             </variation>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fn2-o5-tj3">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fn2-o5-tj3">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                             <variation key="widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="14" y="8" width="91" height="78"/>
+                                                <rect key="frame" x="14" y="8" width="112" height="72"/>
                                             </variation>
                                         </imageView>
                                     </subviews>
@@ -185,6 +185,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bce-eQ-aA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="220.5" y="513"/>
+        </scene>
+        <!--Meme Detail View Controller-->
+        <scene sceneID="I3k-PV-Sj3">
+            <objects>
+                <viewController storyboardIdentifier="MemeDetailViewController" id="4Tz-iU-HCt" customClass="MemeDetailViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Vc-Fc-KTg"/>
+                        <viewControllerLayoutGuide type="bottom" id="nSA-RW-SOf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FPU-OV-V3t">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CBP-DO-arv">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="74" y="157" width="277" height="285"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="CBP-DO-arv" secondAttribute="centerY" constant="0.5" id="QTP-mw-YNf"/>
+                            <constraint firstAttribute="centerX" secondItem="CBP-DO-arv" secondAttribute="centerX" constant="6.5" id="oTl-Ix-86o"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="CBP-DO-arv"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="QTP-mw-YNf"/>
+                                <exclude reference="oTl-Ix-86o"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="CBP-DO-arv"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="QTP-mw-YNf"/>
+                                <include reference="oTl-Ix-86o"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="CBP-DO-arv" id="65b-oU-Tqa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cn1-TU-mUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.5" y="518"/>
         </scene>
         <!--Meme Editor View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -322,7 +372,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1080" y="113"/>
+            <point key="canvasLocation" x="972" y="-190"/>
         </scene>
     </scenes>
     <resources>
